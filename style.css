@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+body { 
+    color: #000000;
+    font-family: Thasadith;
+    font-size: 20px;
+}
+h1 {
+    font-weight: bolder;
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 40px;
+}
+
+/* Om de één of andere reden is de h1 op de mobiele versie op de homepage anders dan op de andere pagina's. Ik wilde de h1 op elke pagina zoals op de homepage, maar ik kreeg het helaas niet meer voor elkaar. */
+
+nav {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+.menu li{
+    display: inline;
+    padding: 20px 20px;
+    line-height: 100px;
+    font-size: 35px;
+}
+[aria-current="page"] {
+    font-weight: bolder;
+} 
+main {
+    margin: 25px auto;
+    width: 800px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    color: rgb(0, 204, 255);
+}
+.link-naar-meer { 
+    text-align: right;
+    margin-top: 10px;
+}
+.link-naar-meer a {
+    color: rgb(0, 204, 255);
+}
+.link-naar-meer a:hover {
+    color: #000000;
+}
+article {
+    margin-top: 25px;
+}
+hr {
+    margin: 50px 0px;
+}
+ul.photo-overview {
+    padding-inline-start: 0px;
+}
+ul.big-photo-overview {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-inline-start: 0px;
+}
+li.photo-row {
+    height: 30vh;
+    margin: 15px 0px;
+    list-style: none;
+}
+.photo-row img {
+    height: 100%;
+    width: 100%;
+}
+.photo-row {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.photo-row a {
+    color: white;
+}
+.img-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 204, 255, 0.76);
+    border-radius: 30px;
+    padding: 15px 15px;
+}
+form {
+    text-align: center;
+    margin-top: 45px;
+}
+.p-form {
+    margin: 50px 175px;
+    text-align: center;
+}
+label {
+    font-weight: bolder;
+    font-size: 25px;
+}
+input {
+    display: block;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 30px;
+}
+textarea {
+    display: block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+button {
+    font-family: Thasadith;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+iframe {
+    width: 100%;
+    height: 450px;
+    margin: 20px 0px 10px 0px;
+}
+.bekijk-accommodaties {
+    background-color: rgb(0, 204, 255);
+    border-radius: 30px;
+    padding: 15px 15px;
+    text-align: center;
+    width: 350px;
+    margin: 30px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder; 
+    margin-bottom: 45px;
+}
+.bekijk-accommodaties a {
+    color: white;
+}
+/* Op de contact-pagina op de mobiele versie wilde ik de tekst boven het formulier vergroten, maar wanneer ik dat wilde doen via .p-form werd de tekst van de labels ook groter. */
+
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: rgb(0, 204, 255);
+    height: 75px;
+    padding: 1px;
+    margin-top: 20px;
+}
+@media (min-width: 1024px) {
+    
+    body { 
+        font-size: 18px;
+    }
+    .menu li{
+        padding: 15px 15px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+    ul.photo-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px 15px;
+        grid-template-areas:
+        ". ."
+        ". .";
+    }  
+    .photo-row img {
+        height: 100%;
+        width: 100%;
+    }
+    .photo-row {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .photo-row a {
+        color: white;
+    }
+    li.photo-row {
+        margin: 0px 0px;
+    }
+    .img-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 204, 255, 0.76);
+        border-radius: 30px;
+        padding: 8px 15px;
+    }
+    hr {
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    h1 {
+        margin: 40px 0px;
+        font-size: 35px;
+    }
+    .big-photo-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 15px 15px;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          ". . ."
+          ". . .";
+    } 
+    ul.big-photo-overview {
+        display: grid;
+    }
+    form {
+        text-align: center;
+        margin-top: 45px;
+    }
+    label {
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    input {
+        display: block;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        height: 30px;
+    }
+    textarea {
+        display: block;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    button {
+        font-family: Thasadith;
+        font-weight: bolder;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    footer {
+        height: 40px;
+        font-size: 14px;
+    }
+}
